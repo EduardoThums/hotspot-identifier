@@ -11,6 +11,7 @@ For those who love(or hate) work at legacy projects, HotSpot Identifier cames to
 - Use github actions to test the code
 - Create section about use thecnologies based on language
     - Python: radon
+- Create section about how to contribute
 
 ## Disclaimer
 This tool only works on Python based projects, in the future maybe other languages will be supported too.
