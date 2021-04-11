@@ -1,5 +1,5 @@
-.PHONY: calculate-code-complexity calculate-churn freeze-dependencies
-.SILENT: calculate-code-complexity calculate-churn
+.PHONY: calculate-code-complexity calculate-churn freeze-dependencies identify-hotspots
+.SILENT: calculate-code-complexity calculate-churn identify-hotspots
 
 calculate-code-complexity:
 	radon cc -na -i venv -e "*_test.py" -j -O radon-cc-output.json .
