@@ -21,5 +21,5 @@ make identify-hotspots path=/path/to/your/repository/root
     - Python: radon
 - Create section about how to contribute
 
-## Disclaimer
+## Warning
 This tool only works on Python based projects, in the future maybe other languages will be supported too.
