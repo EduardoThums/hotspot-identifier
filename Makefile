@@ -1,10 +1,11 @@
-.SILENT:
+.PHONY: calculate-code-complexity calculate-churn freeze-dependencies
+.SILENT: calculate-code-complexity calculate-churn
+
 calculate-code-complexity:
-	radon cc -nc -i venv -e "*_test.py" -j -O radon-cc-output.json .
-	python ./playgrounds/calculate_complexity_playground.py
+	radon cc -na -i venv -e "*_test.py" -j -O radon-cc-output.json .
+	python ./calculate_code_complexity.py
 	rm radon-cc-output.json
 
-.SILENT:
 calculate-churn:
 	git log --format=format: --name-only --since=12.month \
 	| egrep -v "^$" \
@@ -21,4 +22,7 @@ calculate-churn:
 identify-hotspots:
 	make calculate-code-complexity
 	make calculate-churn
-	python ./playgrounds/generate_graph.py
+	python ./generate_graph.py
+
+freeze-dependencies:
+	pip freeze > requirements.txt

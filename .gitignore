@@ -218,3 +218,11 @@ fabric.properties
 
 # Local History for Visual Studio Code
 .history/
+
+radon-cc-output.json
+
+code-complexity.list
+churn.list
+code-complexity-vs-churn.jpeg
+
+.idea
