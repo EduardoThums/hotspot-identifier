@@ -2,6 +2,14 @@
 
 For those who love(or hate) work at legacy projects, HotSpot Identifier cames to save you from this horrible and messy state. Identifying the most complexy and changed files in your code, a scatter graphic is generated to guide you to where start the refactoring.
 
+## Usage
+
+```
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+make identify-hotspots path=/path/to/your/repository/root
+```
 ## TODO
 - Create section about how it works(tecnicliy)
 - Explain the concept based on blog/articles
